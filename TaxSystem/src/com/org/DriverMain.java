@@ -6,7 +6,7 @@ public class DriverMain {
 
         System.out.println("Enter Employee ID:");
         int empId = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine(); // consume newline1
         System.out.println("Enter Employee Name:");
         String name = scanner.nextLine();
         System.out.println("Enter Employee Salary:");
