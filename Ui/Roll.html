@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      background: #dcc396;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .roll {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: #914e4e;
+      border-radius: 0 0 50% 50% / 0 0 15% 15%;
+    }
+    .roll::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      width: 100%;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+    }
+    .roll::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 20px;
+      background: #622c2c;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="roll"></div>
+</body>
+</html>
