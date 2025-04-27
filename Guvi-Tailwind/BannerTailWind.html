@@ -29,4 +29,68 @@
             </div>
             </section>
     </body>
+    <script>
+        var foo = 1;
+(function () {
+  console.log(foo);
+  foo = 2;
+  console.log(window.foo);
+  console.log(foo);
+  var foo = 3;
+  console.log(foo);
+  console.log(window.foo)
+})()
+
+var bar = 1
+function foo() {
+  return this.bar++
+}
+const a = {
+  bar: 10,
+  foo1: foo,
+  foo2: function() {
+    return foo()
+  },
+} 
+console.log(a.foo1.call())
+console.log(a.foo1())
+console.log(a.foo2.call())
+console.log(a.foo2())
+
+(() => {
+  if (!fn) {
+    function fn() {
+      console.log('2')
+    }
+  }
+  fn()
+})()
+function fn() {
+  console.log('1')
+}
+
+function fn1() {
+  console.log('3')
+}
+(() => {
+  if (!fn1) {
+    function fn1() {
+      console.log('4')
+    }
+  }
+  fn1()
+})()
+
+
+// another one !
+(() => {
+  if (false) {
+    function fn3() {
+      console.log('5')
+    }
+  }
+  fn3()
+})()
+
+    </script>
 </html>
